@@ -1,6 +1,10 @@
 # OptDigits: off-policy selection and reward poisoning
 
-This repository contains three empirical stages. **[E3: near-incumbent policies and the sibling-removal diagnostic](boundary/README.md)** is the latest follow-up: 327,600 audited decisions on 400 shared evaluation logs. It exposes harmful deployments once better sibling candidates are removed, but the confidence-based correction prevents those failures by always retaining the incumbent at the tested nonzero budgets. It does not yet demonstrate useful protected improvement under corruption.
+This repository contains a sequence of empirical studies with preserved baselines. **[The latest controlled benchmark and confidence-allocation experiment](controlled/README.md)** reports a fixed-budget security–utility tradeoff, exact adaptive attacks, a method based on policy-specific confidence allocation, and a prespecified reversed-geometry test where that heuristic fails. Its primary comparison improves utility and lowers the model-specific harm bound; it is a conditional result, not a claim of general Pareto optimality or established novelty.
+
+**[Targeted evidence collection on OptDigits](design/README.md)** obtains positive protected improvement at 0.5% reward corruption: +0.910 pp under feasible attacks, with an all-real-edit utility floor of +0.863 pp. It requires prospective selection of informative contexts and actions; its acquisition cost is reported. It does not retrospectively repair earlier logs.
+
+**[E3: near-incumbent policies and the sibling-removal diagnostic](boundary/README.md)** remains the preserved vulnerability/refusal baseline: 327,600 decisions on 400 shared logs. Its corrected gate always retains the incumbent at the tested nonzero budgets.
 
 **[E2: independently trained policies under reward poisoning](security/README.md)** evaluates the earlier, more widely separated library. That complete 400-log experiment found no harmful selections even without protection. Its source and results are preserved as a negative baseline.
 
