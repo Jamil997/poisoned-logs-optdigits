@@ -1,0 +1,28 @@
+{
+  "decisions": 345600,
+  "independent_seed_clusters": 200,
+  "distinct_logs": 3200,
+  "note": "Logs across designs and n use common random numbers; do not count 3200 as independent replicates for aggregate inference. 200 independent seed clusters.",
+  "primary": {
+    "design": "joint_1",
+    "n": 20000,
+    "epsilon": 0.005,
+    "method": "corrected",
+    "condition": "adaptive",
+    "utility": 0.9103157823617848,
+    "utility_low": 0.9082206756832507,
+    "utility_high": 0.9124108890403188,
+    "floor": 0.8625041949185508,
+    "floor_low": 0.8609045750271098,
+    "floor_high": 0.864247050920365,
+    "harm": 0.0,
+    "harm_low": 0.0,
+    "harm_high": 0.0,
+    "fallback": 0.0,
+    "fallback_low": 0.0,
+    "fallback_high": 0.0,
+    "unresolved": 300,
+    "harm_possible": 0,
+    "outcomes": 1200
+  }
+}

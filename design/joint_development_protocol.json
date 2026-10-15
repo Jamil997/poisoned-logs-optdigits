@@ -1,0 +1,12 @@
+{
+ "stage": "E4b development: select informative contexts as well as actions",
+ "history": "After inspecting E4 development.csv. All earlier attempts retained. This is a new data-acquisition setting: sample from the known unlabeled finite context pool, instead of assuming contexts must arrive uniformly. Rewards remain vulnerable to the same 0.5% arbitrary edits; no trusted reward oracle for the defender.",
+ "design": "Q_lambda(x,a)=(1-lambda)*P(x)*mu0(a|x)+lambda*Q_disagree(x,a). Q_disagree=.99*max_j|delta_j(x,a)|/sum_xa max_j|delta_j(x,a)|+.01*P(x)*mu0(a|x). All six candidates define Q, unchanged for each three-candidate library.",
+ "lambda": [0,0.25,0.5,0.75,1],
+ "n": [5000,20000],
+ "epsilon": 0.005,
+ "seeds": {"start": 32000, "count": 20},
+ "gates": "Same centered DR/Bernstein, corrected and nominal; development initially evaluates deterministic all-real-edit envelopes, then confirmation runs the full adaptive attacks. Importance coefficient delta/(N_contexts*Q). No label information used by Q or bounds.",
+ "cost": "Report sampled context shift, expected reward cost versus incumbent on those same contexts, maximum rejection-sampling envelope for access through an iid uniform context stream, and actual query count. Active-pool access is an explicit new assumption.",
+ "success": "Positive certified worst-case utility averaged across ALL six libraries at fixed epsilon .005; freeze confirmation before new seeds. No global Pareto/novelty claim."
+}

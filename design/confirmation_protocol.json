@@ -1,0 +1,65 @@
+{
+  "stage": "E4: fresh-log confirmation of prospective joint context/action sampling",
+  "created_utc": "2026-10-15T18:33:39.849068+00:00",
+  "history": "Chosen after E4/E4b development; all development attempts retained. No confirmation seeds evaluated before this file. Frozen policies and OptDigits context pool previously inspected; this is fresh-log confirmation, not a new dataset.",
+  "designs": [
+    "joint_0",
+    "joint_0.25",
+    "joint_0.5",
+    "joint_0.75",
+    "joint_1",
+    "action_only",
+    "uniform",
+    "joint_rms"
+  ],
+  "n": [
+    5000,
+    20000
+  ],
+  "epsilon": [
+    0.005,
+    0.01
+  ],
+  "alpha": 0.05,
+  "timing_seeds": {
+    "start": 39000,
+    "count": 2
+  },
+  "main_seeds": {
+    "start": 40000,
+    "count": 200
+  },
+  "shard_size": 25,
+  "primary": {
+    "design": "joint_1",
+    "n": 20000,
+    "epsilon": 0.005,
+    "method": "corrected",
+    "libraries": "all six equally weighted"
+  },
+  "success": "Mean all-real-edit certified utility floor strictly positive with 95% seed-cluster bootstrap lower endpoint >0; no harmful feasible attacks and no possible harmful outcomes under certificates. Compare to always-retain and original logging at same n/epsilon. Report every design/cell and all adaptive-attack gaps.",
+  "inference": "200 common-random-number seed clusters, shared across designs/libraries/budgets/n. Paired bootstrap 10000 resamples seed 87421. Per-cell harm Clopper-Pearson upper 95%; never pool correlated library outcomes. Simultaneous alpha=.05 only across three candidates within a fixed gate, not a global claim across designs.",
+  "threat": "White-box reward-only edits, at most floor(n*epsilon) rows, arbitrary replacement in [0,1]. Policies, reward model, contexts, actions and propensities trusted and frozen. Search uses binary flips; deterministic envelopes cover real-valued replacements. Oracle attacker knows true candidate ordering; defender does not.",
+  "attack": {
+    "method": "universal score envelopes; targeted top-k witnesses; adaptive active-branch MILP with competitor cutting planes; validate actual final gate",
+    "milp_time_limit_seconds": 1.0,
+    "cutting_plane_iterations": 12,
+    "target_restarts": 3,
+    "tolerance": 1e-09,
+    "incomplete_search": "retain unresolved interval; never label failed search robust"
+  },
+  "design": "Q(x,a) proportional to maximum absolute policy difference, mixed with baseline joint distribution and 1% support floor. Shared design based on all six candidates. Original P_X is uniform; estimator uses delta/(N_X Q). Prospective active access to unlabeled context pool is required. Q and all confidence quantities exclude evaluation labels.",
+  "baselines": "Original logging; action-only disagreement sampling; uniform actions/contexts; joint RMS difference sampling, which minimizes mean candidate second moment before support mixing. Nominal and corrected centered gates plus retain for each design.",
+  "cost": "All methods spend n sampled reward observations; main corruption cap floor(.005*n). Report query-context shift, incumbent-relative collection reward cost on queried contexts, and worst-case rejection envelope under uniform context arrivals. No claim to improve total end-to-end reward at zero collection cost.",
+  "frozen_sources": {
+    "confirmation.py": "e3f50e5397361ab61a1deb9591cb4680cfdc1a0af750247bfb26d49289abc020",
+    "joint_develop.py": "23e7a248898a34a52cad142fd944666afa1f9924399da0e8ceb03e198f68b3e9",
+    "develop.py": "3fcb707f90f32e0659a17116b49ca8f35d650a498bb23eccda901664517c8dd7"
+  },
+  "models_sha256": "d7ca99f346a6fd9aa933c1be5bc4b8c9ec91f13776f83c0a4910e8f1abdae848",
+  "compute_amendment": {
+    "created_utc": "2026-10-15T18:35:04.028678+00:00",
+    "before_main": true,
+    "reason": "Initial 32-log timing run spends substantial MILP time distinguishing safe outcomes. Main uses original complete E2 attack whenever universal envelopes permit harm. If envelopes already exclude all harmful outcomes, retain target/rival endpoint search and nominal LP certificates but skip binary MILP restarts; disclose residual utility gaps. The all-real certified primary endpoint is unaffected. Initial timing source/protocol and all its outcomes remain archived."
+  }
+}

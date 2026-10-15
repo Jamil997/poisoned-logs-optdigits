@@ -1,0 +1,15 @@
+{
+  "stage": "E4 development: bounded influence and disagreement-aware logging",
+  "history": "Defined after E3 and E3b were fully observed. No E4 outcomes seen. This is development, followed by a separately frozen fresh-log confirmation.",
+  "fixed_primary_epsilon": 0.005,
+  "stress_epsilon": 0.01,
+  "development_n": 20000,
+  "development_seeds": {"start": 31000, "count": 20},
+  "libraries": "All six E3b libraries, unchanged candidates, no cherry-picking.",
+  "logging": "Old mu0=0.8*pi0+0.02. Shared disagreement proposal d(a|x) proportional to max across ALL SIX candidates |pi_j-pi0|. Mix (1-lambda)*mu0+lambda*d with lambda 0,.25,.5,.75,1. Also uniform and RMS-disagreement proposal. Tiny uniform floor 0.01 on disagreement proposals. Design uses frozen probabilities and contexts, never evaluation labels.",
+  "gates": "Centered DR, unchanged one-sided Bernstein bound; exact top-k reward correction. Additional clipped-centered gates c'=clip(c,-h,h), h=.25,.5,1,2,4,8, with label-free worst-case bias .5 E_x sum_a |delta-mu*c'|. No assumption that fitted reward predictions are correct.",
+  "alpha": 0.05,
+  "primary_axes": ["all-real-edit certified lower bound on mean improvement", "harmful deployment and certified possible harm", "prospective logging reward cost"],
+  "success": "Positive mean utility under full adaptive attack at epsilon .005; no hidden selection of library or seed. Always-retain comparison. Seek positive certified utility floor, not merely failed attack search. Any development choice must be fixed before fresh-log confirmation.",
+  "limits": "Repeated sampling of fixed OptDigits evaluation pool; conditional finite-pool inference only. Changing mu requires collecting different logs, cannot repair previously collected logs. Logging reward cost is a separate axis; no claim of total lifetime benefit without amortization analysis."
+}
