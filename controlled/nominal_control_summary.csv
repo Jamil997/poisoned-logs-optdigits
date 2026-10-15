@@ -1,0 +1,5 @@
+good_amplitude,bad_amplitude,method,improvement,harm,fallback
+0.05,0.45,influence_p1_nominal,0.0022629,0.189,0.0
+0.05,0.45,uniform_nominal,0.0016194,0.354,0.0
+0.45,0.05,influence_p1_nominal,0.0268379,0.001,0.005
+0.45,0.05,uniform_nominal,0.027,0.0,0.0

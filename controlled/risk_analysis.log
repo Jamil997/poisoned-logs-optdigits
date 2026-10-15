@@ -1,0 +1,2 @@
+risk {'passed': True, 'decisions': 60000, 'logs': 1000, 'witnesses': 60000, 'max_score_error': 1.6488546639159551e-15, 'minimum_attack_group_slack': 4673, 'exact_worst_utility_verified': True, 'seconds': 1.467748999944888}
+risk {'contrast': 'corrected binomial minus corrected Bernstein', 'difference_pp': 0.07941, 'low': 0.07131, 'high': 0.08751, 'risk_level': 0.01}

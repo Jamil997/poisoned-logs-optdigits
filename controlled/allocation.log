@@ -1,0 +1,10 @@
+completed 5000 0.02 1.0
+completed 5000 0.03 2.0
+completed 5000 0.05 3.07
+completed 20000 0.02 4.43
+completed 20000 0.03 5.5
+completed 20000 0.05 6.49
+completed 100000 0.02 10.04
+completed 100000 0.03 11.14
+completed 100000 0.05 12.15
+{'seconds': 18.06441333302064, 'outcomes': 1215000, 'logs': 9000, 'witnesses': 324000, 'source_sha256': 'd3762e348df2357cd88e09a80945e512508f145b1ca2b94315f30614e2017cfa', 'experiment_sha256': '355ffee1229049f5e9e5e014a5df44d11a3585b2e5635a42d0f1fc560869b9e6', 'protocol_sha256': 'f414fc66d68c9f699f0d1ba3630879c4c92245bdb1d08be57bcc1a871627da48'}

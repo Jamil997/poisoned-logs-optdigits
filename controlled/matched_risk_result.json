@@ -1,0 +1,20 @@
+{
+  "threshold": 10183,
+  "bernstein_effective_alpha": 0.07446378985830036,
+  "difference_pp": 0.0,
+  "low": 0.0,
+  "high": 0.0,
+  "identical_decisions": true,
+  "summary": {
+    "binomial": {
+      "improvement": 0.0017211000000000001,
+      "harm": 0.001,
+      "fallback": 0.425
+    },
+    "matched_bernstein": {
+      "improvement": 0.0017211000000000001,
+      "harm": 0.001,
+      "fallback": 0.425
+    }
+  }
+}

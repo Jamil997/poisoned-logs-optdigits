@@ -1,0 +1,10 @@
+completed 5000 0.02 seconds 0.67
+completed 5000 0.03 seconds 1.38
+completed 5000 0.05 seconds 2.08
+completed 20000 0.02 seconds 2.81
+completed 20000 0.03 seconds 3.53
+completed 20000 0.05 seconds 4.28
+completed 100000 0.02 seconds 5.16
+completed 100000 0.03 seconds 5.93
+completed 100000 0.05 seconds 6.61
+{'seconds': 10.783202291000634, 'outcomes': 810000, 'logs': 9000, 'witnesses': 216000, 'source_sha256': '355ffee1229049f5e9e5e014a5df44d11a3585b2e5635a42d0f1fc560869b9e6', 'protocol_sha256': 'c3f8ec174838a34faf13026501512d12234f032b68e80d2b08ac29b4a5c6ed5f'}

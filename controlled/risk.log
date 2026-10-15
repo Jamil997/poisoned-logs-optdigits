@@ -1,0 +1,22 @@
+                           improvement   harm  fallback
+alpha method                                           
+0.001 bernstein_corrected     0.000384  0.000     0.872
+      bernstein_nominal       0.002655  0.060     0.037
+      binomial_corrected      0.000906  0.000     0.698
+      binomial_nominal        0.002398  0.149     0.007
+0.005 bernstein_corrected     0.000729  0.000     0.757
+      bernstein_nominal       0.002525  0.115     0.009
+      binomial_corrected      0.001436  0.001     0.520
+      binomial_nominal        0.001847  0.294     0.002
+0.010 bernstein_corrected     0.000927  0.000     0.691
+      bernstein_nominal       0.002386  0.152     0.007
+      binomial_corrected      0.001721  0.001     0.425
+      binomial_nominal        0.001567  0.366     0.002
+0.025 bernstein_corrected     0.001211  0.001     0.595
+      bernstein_nominal       0.002067  0.237     0.003
+      binomial_corrected      0.002130  0.003     0.286
+      binomial_nominal        0.001155  0.473     0.000
+0.050 bernstein_corrected     0.001526  0.001     0.490
+      bernstein_nominal       0.001758  0.317     0.002
+      binomial_corrected      0.002359  0.009     0.202
+      binomial_nominal        0.000828  0.557     0.000

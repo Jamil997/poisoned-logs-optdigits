@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "decisions": 60000,
+  "logs": 1000,
+  "witnesses": 60000,
+  "max_score_error": 1.6488546639159551e-15,
+  "minimum_attack_group_slack": 4673,
+  "exact_worst_utility_verified": true,
+  "seconds": 1.467748999944888
+}

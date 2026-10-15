@@ -1,0 +1,18 @@
+{
+ "stage":"E6: controlled stochastic bandit benchmark and corruption-adjusted exact binomial gate",
+ "history":"Designed analytically after E4 and E5 development. No E6 outcomes used to choose parameters. Fresh seeds frozen before first run. A mechanism benchmark, not a replacement for OptDigits or proof of real-world effectiveness.",
+ "environment":"Four equally likely contexts (s,z) in {-1,+1}^2, two actions. R|s,z,a is Bernoulli(.5+(2a-1)*(beta*s-theta*z)). Incumbent chooses action 1 with probability .5; logging is also .5. Good candidate chooses 1 with probability .5+.05*s; bad candidate .5+b*z. All policies have analytic continuous parameters. True advantages are .1*beta and -2*b*theta.",
+ "n":[5000,20000,100000], "beta":[0.02,0.03,0.05], "bad_amplitude":[0.15,0.45], "theta":0.001,
+ "epsilon":[0.005,0.01,0.02], "alpha":0.05,
+ "seeds":{"start":60000,"count":1000},
+ "methods":["bernstein_nominal","bernstein_corrected","binomial_nominal","binomial_corrected","retain"],
+ "conditions":["clean","random","adaptive"],
+ "primary":{"n":20000,"beta":0.03,"bad_amplitude":0.45,"epsilon":0.01},
+ "new_gate":"For constant absolute paired weight B_j, transform each binary observation to Y_ji=1 iff c_ji*(R_i-.5)>0. Then Delta_j=B_j*(E Y_ji-.5). Use one-sided exact Clopper-Pearson lower bound at alpha/2 on max(0,sum Y_ji-k) favorable observations. The complete attack-aware gate is monotone in each favorable count. Arbitrary real replacement rewards are thresholded at .5 before this gate; clean binary rewards are unchanged. At most k count changes result.",
+ "bernstein":"Identical centered paired estimator and one-sided Bernstein allowance as E2-E4, B=max|c|, V=B^2/4. Exact top-k correction equals k*B/n while sufficient favorable observations remain; implement exact count truncation.",
+ "attack":"Adaptive white-box attack on the actual final gate. Target bad policy by flipping k rows favorable for good and unfavorable for bad, simultaneously attaining the maximum bad count and minimum good count. Target fallback by flipping k rows favorable for both. If both groups have at least k rows, these endpoint attacks certify exact worst selected-policy utility for every binary edit (and every real edit after binarization). Check group sizes for every log; fail if assumption fails rather than pretend exactness. A separate expanded-row exhaustive test checks small instances.",
+ "success":"At primary fixed 1% corruption, corrected binomial gate has positive mean utility (95% paired seed interval excludes zero), fewer harmful deployments than its nominal gate, and strictly higher utility than corrected Bernstein with paired interval excluding zero. Report all cells, including failure regions, no parameter selection after confirmation.",
+ "axes":["harm probability","mean true improvement including zero fallback","fallback","runtime"],
+ "inference":"1000 independent seed clusters. Same clean log shared by bad amplitudes, corruption budgets, rules and attack conditions. Paired bootstrap 10000 resamples seed 77219. Conditional to this specified synthetic environment. Fixed-seed confirmation is not dataset generalization.",
+ "limits":"The exact-count method uses binary rewards and constant-magnitude paired coefficients, which hold here but not generally on OptDigits. A paper needs a generalization or a well-motivated restricted setting and strong literature comparisons. This is a new implementation for this project, not a verified novelty claim."
+}

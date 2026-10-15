@@ -1,0 +1,9 @@
+{
+ "stage":"E6b fresh-log risk calibration",
+ "history":"After E6 primary results were inspected. E6 exact gate had 0.9% attained harmful deployment at alpha=.05, with higher utility than Bernstein. This follow-up fixes the full alpha grid before new seeds to quantify the risk-utility tradeoff. No E6b outcomes seen.",
+ "n":20000,"beta":0.03,"bad_amplitude":0.45,"theta":0.001,"epsilon":[0.005,0.01,0.02],
+ "alpha":[0.001,0.005,0.01,0.025,0.05],"seeds":{"start":70000,"count":1000},
+ "primary":"Compare corrected exact-binomial and corrected Bernstein at alpha=.01 and epsilon=.01. Positive utility, paired improvement over Bernstein, and theoretically controlled harm. Report every alpha/epsilon cell; no operating point selected after confirmation.",
+ "risk":"Both gates use alpha/2 per candidate. With one truly harmful candidate, its clean false-positive probability upper-bounds harmful deployment under every allowed adaptive attack. Compute this upper bound exactly from the binomial survival function and the integer threshold, in addition to observed harm and binomial confidence limits. This is a model-specific probability bound, not zero risk.",
+ "reuse":"Unchanged environment, candidate policies, complete optimal endpoint attack, and gate equations from E6. Fresh seeds only."
+}

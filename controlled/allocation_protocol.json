@@ -1,0 +1,13 @@
+{
+ "stage":"E7: influence-weighted confidence allocation",
+ "history":"Designed after E6c showed exact-count and Bernstein decisions coincide when calibrated to the same bad-positive threshold. This follow-up changes how a fixed total confidence budget is distributed across policies, rather than renaming a confidence bound. Fresh seeds fixed before outcomes.",
+ "n":[5000,20000,100000],"beta":[0.02,0.03,0.05],"theta":0.001,"epsilon":[0.005,0.01,0.02],
+ "amplitudes":[[0.05,0.15],[0.05,0.45],[0.45,0.05]],"alpha":0.01,
+ "seeds":{"start":80000,"count":1000},
+ "methods":["uniform","influence_p1","influence_p2","uniform_matched_p1","retain"],
+ "allocation":"alpha_j = alpha * B_j^(-p) / sum_l B_l^(-p), where B_j=2*policy amplitude is fixed before rewards. p=1 primary and p=2 secondary. Exact binomial gate uses each candidate's own alpha_j and the same corruption correction. Uniform gives alpha/2 to both. The matched-risk control gives both policies the p1 bad-policy allocation, using oracle identity only to define an evaluation comparator; it is not a deployable generic tuning rule.",
+ "primary":{"n":20000,"beta":0.03,"good_amplitude":0.05,"bad_amplitude":0.45,"epsilon":0.01,"method":"influence_p1"},
+ "success":"Higher mean utility with paired 95% interval excluding zero versus uniform at the same total alpha; no increase in empirical harm and strictly lower model-specific upper bound for the harmful candidate. Also compare uniform calibrated to the same harmful-candidate bound. Report the full grid, especially the reversed influence setting (good amplitude .45, bad .05). Do not claim global domination if this stress test fails.",
+ "validity":"Allocation depends only on fixed policy coefficients, not evaluation rewards or true utility. Sum alpha_j=alpha; simultaneous lower confidence coverage remains at least 1-alpha. The exact adaptive endpoint attack and its checks are unchanged.",
+ "limits":"Weighted Bonferroni allocation is established statistics. This is a proposed project-specific method and empirical mechanism study; novelty is unverified. A useful general method must choose allocations without assuming the low-influence candidate is the good one."
+}
