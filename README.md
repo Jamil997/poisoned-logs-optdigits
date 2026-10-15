@@ -1,8 +1,10 @@
 # OptDigits: off-policy selection and reward poisoning
 
-This repository contains two completed empirical stages. **[E2: the full independent-policy poisoning experiment](security/README.md)** evaluates 400 fresh logs and 46,800 decisions. The pre-specified setting produced no harmful selections even without protection, so it does not establish a safety benefit for the proposed correction. The report includes the negative finding, attack certificates, uncertainty, code, and complete outputs.
+This repository contains three empirical stages. **[E3: near-incumbent policies and the sibling-removal diagnostic](boundary/README.md)** is the latest follow-up: 327,600 audited decisions on 400 shared evaluation logs. It exposes harmful deployments once better sibling candidates are removed, but the confidence-based correction prevents those failures by always retaining the incumbent at the tested nonzero budgets. It does not yet demonstrate useful protected improvement under corruption.
 
-**E0**, documented below, reproduces the authors' released clean OptDigits benchmark. Its original code and result archive are preserved. The earlier [synthetic pilot](https://github.com/Jamil997/poisoned-logs-prior-pilot) remains a separate snapshot.
+**[E2: independently trained policies under reward poisoning](security/README.md)** evaluates the earlier, more widely separated library. That complete 400-log experiment found no harmful selections even without protection. Its source and results are preserved as a negative baseline.
+
+**E0**, below, reproduces the authors' released clean OptDigits benchmark. The original code and result archive remain unchanged. The earlier [synthetic pilot](https://github.com/Jamil997/poisoned-logs-prior-pilot) is a separate snapshot.
 
 ---
 
