@@ -1,0 +1,114 @@
+{
+  "outcomes": 46800,
+  "independent_logs": 400,
+  "cells": [
+    {
+      "outcomes": 11700,
+      "independent_logs": 100,
+      "cells": [
+        {
+          "mode": "main",
+          "seconds": 433.5960677920375,
+          "outcomes": 2925,
+          "independent_logs": 25,
+          "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+          "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+          "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+          "python": "3.12.14",
+          "numpy": "2.5.4",
+          "solver_calls": 478,
+          "all_real_attack_unresolved": 27
+        },
+        {
+          "mode": "main",
+          "seconds": 472.9703675410128,
+          "outcomes": 2925,
+          "independent_logs": 25,
+          "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+          "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+          "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+          "python": "3.12.14",
+          "numpy": "2.5.4",
+          "solver_calls": 532,
+          "all_real_attack_unresolved": 30
+        },
+        {
+          "mode": "main",
+          "seconds": 350.38398483296623,
+          "outcomes": 2925,
+          "independent_logs": 25,
+          "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+          "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+          "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+          "python": "3.12.14",
+          "numpy": "2.5.4",
+          "solver_calls": 384,
+          "all_real_attack_unresolved": 25
+        },
+        {
+          "mode": "main",
+          "seconds": 330.25816500000656,
+          "outcomes": 2925,
+          "independent_logs": 25,
+          "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+          "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+          "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+          "python": "3.12.14",
+          "numpy": "2.5.4",
+          "solver_calls": 349,
+          "all_real_attack_unresolved": 32
+        }
+      ],
+      "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+      "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+      "mode": "main",
+      "seconds": 473.94125612505013,
+      "repartitioned": true
+    },
+    {
+      "mode": "main",
+      "seconds": 176.60161791701103,
+      "outcomes": 11700,
+      "independent_logs": 100,
+      "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+      "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+      "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "solver_calls": 160,
+      "all_real_attack_unresolved": 16
+    },
+    {
+      "mode": "main",
+      "seconds": 768.6929105000454,
+      "outcomes": 11700,
+      "independent_logs": 100,
+      "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+      "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+      "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "solver_calls": 555,
+      "all_real_attack_unresolved": 185
+    },
+    {
+      "mode": "main",
+      "seconds": 98.80939774995204,
+      "outcomes": 11700,
+      "independent_logs": 100,
+      "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+      "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+      "models_sha256": "9194334810adfe88ebea6e2e64c41bd15686195d43d205a193cbfba8f229b3c7",
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "solver_calls": 45,
+      "all_real_attack_unresolved": 15
+    }
+  ],
+  "protocol_sha256": "43f46aa0c856fa3094222810d049f2fe5bc033e45a8a1bfc1c1768b58ea291a7",
+  "source_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0",
+  "mode": "main",
+  "wall_seconds": 1354.7617330551147,
+  "workers": 4,
+  "note": "Wall time includes the excluded partial attempt before repartitioning. All 400 final logs counted once."
+}

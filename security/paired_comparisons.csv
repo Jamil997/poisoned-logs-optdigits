@@ -1,0 +1,7 @@
+base,contrast,difference_pp,low_pp,high_pp
+ips_point,"corrected minus nominal, mean over all 12 grid cells",-0.18266376314994445,-0.19475957639158856,-0.16983201119313016
+dr_point,"corrected minus nominal, mean over all 12 grid cells",-0.1751156737635831,-0.18794742572039744,-0.16152911286813265
+ips_h,"corrected minus nominal, mean over all 12 grid cells",0.0,0.0,0.0
+centered_dr_b,"corrected minus nominal, mean over all 12 grid cells",-0.051435478200952185,-0.06286608265418948,-0.040813917873198706
+dr_b,"corrected minus nominal, mean over all 12 grid cells",-0.10217935000457828,-0.13291405941850015,-0.07369019718309915
+dros_b,"corrected minus nominal, mean over all 12 grid cells",-0.30427362319782636,-0.30734709413921857,-0.298126681315042

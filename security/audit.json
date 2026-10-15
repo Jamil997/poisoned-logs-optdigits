@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "decisions_reconstructed": 46800,
+  "all_decisions": 46800,
+  "attack_witnesses": 43200,
+  "dual_certificates_recomputed": 865,
+  "max_score_error": 5.551115123125783e-17,
+  "max_unresolved_utility_gap": 0.0090577072636335,
+  "seconds": 16.558673206949607,
+  "shards": [
+    "cell_5000_0.5",
+    "cell_20000_0.2",
+    "cell_20000_0.5",
+    "partition_0",
+    "partition_1",
+    "partition_2",
+    "partition_3"
+  ],
+  "merge_verified": true
+}

@@ -1,0 +1,8 @@
+{
+  "inference": "100 paired seed clusters; aggregate weights all 12 grid cells equally; pointwise 95 percent intervals",
+  "zero_harm_pointwise_upper": 0.029513049607039932,
+  "zero_harm_simultaneous_12_cells_upper": 0.05333158459076037,
+  "unique_logs": 400,
+  "outcomes": 46800,
+  "note": "Bootstrap does not remove unresolved attack optimization gaps. Feasible attacks upper-bound worst-case utility; certified floors lower-bound it."
+}
