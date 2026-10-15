@@ -1,0 +1,16 @@
+{
+  "wall_seconds": 114.57411920803133,
+  "libraries": [
+    "mmp",
+    "mpm",
+    "mpp",
+    "pmm",
+    "pmp",
+    "ppm"
+  ],
+  "total_decisions": 280800,
+  "unique_logs_across_libraries": 400,
+  "workers": 4,
+  "protocol_sha256": "27abbcaa14f54a6091e10cdf2c0675e3d6923f82bf3725af97baa4b1c7ff97ca",
+  "source_sha256": "48699ec8d225bd6e4b16aab2a9ce29a09c88dea6f99716315f831ff729523788"
+}

@@ -1,0 +1,14 @@
+{
+  "decisions_reconstructed": 46800,
+  "all_decisions": 46800,
+  "attack_witnesses": 43200,
+  "dual_certificates_recomputed": 6092,
+  "max_score_error": 5.551115123125783e-17,
+  "max_unresolved_utility_gap": 0.0,
+  "seconds": 19.344294291979168,
+  "passed": true,
+  "envelope_and_possible_set_checks": 14400,
+  "random_logs_regenerated": true,
+  "complete_frozen_grid": true,
+  "shards_match_merged": true
+}

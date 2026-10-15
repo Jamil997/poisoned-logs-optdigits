@@ -1,0 +1,13 @@
+{
+  "primary_protocol_sha256": "0f1b2996d7c7a192739a6ef6ff2d3231502b5aef975d9a5ea26fe4f5b1c8721a",
+  "primary_candidate_selection_sha256": "b28edd050feadcc4af5ba916b0d973d478bfd6ff9ed53c88941adab7de05f9d8",
+  "subset_protocol_sha256": "27abbcaa14f54a6091e10cdf2c0675e3d6923f82bf3725af97baa4b1c7ff97ca",
+  "executed_subset_runner_sha256": "48699ec8d225bd6e4b16aab2a9ce29a09c88dea6f99716315f831ff729523788",
+  "current_subset_runner_sha256": "64162f66ce5a3381eb87b45b7f42a162fb087ed26328793427aec5d4aae50af1",
+  "postrun_change": "Two descriptive lists in subset model metadata were filtered to the retained indices. Executed source is preserved. Frozen probability arrays, protocols, sampled logs, attack code, decisions and certificates did not change.",
+  "primary_failures": "No failed or excluded main shards. An analysis command was issued before the merged main file existed; it performed no experimental computation and was rerun after completion.",
+  "tests": "Five inherited E2 mathematical tests and three E3 construction tests passed.",
+  "audit_checks": 327600,
+  "lp_duals_recomputed": 12091,
+  "source_core_sha256": "1fbf33df56cbcd4dc9944e277223495c58b22de5743c0dba55638bf2dc7210d0"
+}

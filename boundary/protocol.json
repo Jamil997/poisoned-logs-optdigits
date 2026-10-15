@@ -1,0 +1,123 @@
+{
+  "stage": "E3: validation-designed near-incumbent policy library",
+  "frozen_before_outcomes": true,
+  "dataset": "UCI 80; official optdigits.tra / optdigits.tes split",
+  "data_url": "https://archive.ics.uci.edu/static/public/80/optical+recognition+of+handwritten+digits.zip",
+  "training_split_seed": 417,
+  "validation_fraction": 0.2,
+  "policy_C": [
+    0.1,
+    0.01,
+    1.0,
+    10.0
+  ],
+  "uniform_mixtures": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "reward_model_C_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "reward_model_selection": "minimum validation multiclass log loss; retain fit on 80 percent training subset",
+  "shrinkage_lambda_grid": [
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    "infinity"
+  ],
+  "shrinkage_selection": "per candidate, n, gamma: minimum exact validation-pool MSE of paired advantage; frozen before test outcomes; this is our tuning rule, not Su et al. model selection",
+  "n": [
+    5000,
+    20000
+  ],
+  "gamma": [
+    0.2,
+    0.5
+  ],
+  "epsilon": [
+    0.0,
+    0.005,
+    0.01
+  ],
+  "alpha": 0.05,
+  "main_seeds": {
+    "start": 20000,
+    "count": 100
+  },
+  "timing_seeds": {
+    "start": 19000,
+    "count": 2
+  },
+  "base_methods": [
+    "ips_point",
+    "dr_point",
+    "ips_h",
+    "centered_dr_b",
+    "dr_b",
+    "dros_b"
+  ],
+  "protection": [
+    "nominal",
+    "corrected"
+  ],
+  "include_retain": true,
+  "conditions": [
+    "clean",
+    "random",
+    "adaptive"
+  ],
+  "success_axes": [
+    "minimize probability of negative true advantage",
+    "maximize mean true advantage including zero on fallback"
+  ],
+  "secondary_metrics": [
+    "fallback",
+    "useful deployment",
+    "clean utility cost",
+    "certified worst-case utility floor",
+    "attack optimality gap in utility",
+    "runtime"
+  ],
+  "success_rule": "Report every cell. Primary contrast is corrected versus nominal centered DR/Bernstein; fitted DR/Bernstein is a secondary matched contrast. Assess both harm and mean true improvement under adaptive attack, and clean improvement cost. A useful defense must reduce harm while retaining positive utility; report fallback and unresolved adversarial utility/harm separately. Finite comparisons cannot prove Pareto optimality.",
+  "threat": "White-box reward-only edits, at most floor(n*epsilon) rows, arbitrary replacement in [0,1]. Policies, reward model, contexts, actions and propensities trusted and frozen. Search uses binary flips; deterministic envelopes cover real-valued replacements. Oracle attacker knows true candidate ordering; defender does not.",
+  "confidence": "Label-free Bernstein second-moment and range bounds over the known uniform finite context pool. No test labels used for confidence terms. Union bound over six candidates per gate. Point-estimate gates have no statistical guarantee.",
+  "attack": {
+    "method": "universal score envelopes; targeted top-k witnesses; adaptive active-branch MILP with competitor cutting planes; validate actual final gate",
+    "milp_time_limit_seconds": 1.0,
+    "cutting_plane_iterations": 12,
+    "target_restarts": 3,
+    "tolerance": 1e-09,
+    "incomplete_search": "retain unresolved interval; never label failed search robust"
+  },
+  "scope": "E3 benchmark-design stress test; all E2 estimators, confidence allowances, attack budgets, sample sizes, exploration levels and alpha retained. New log seeds. No claim of independent benchmark discovery: E2 test results were previously inspected.",
+  "ethics": "Local copies of public attributed data only; no external deployed system attacked.",
+  "cpu_budget_hours": 12,
+  "policy_construction": {
+    "incumbent": "full-feature multinomial logistic regression C=0.1; unchanged from E2",
+    "strong_parent": "full-feature logistic regression C=10",
+    "weak_parents": [
+      "full-feature C=0.01",
+      "top four image rows only, C=1",
+      "bottom four image rows only, C=1"
+    ],
+    "target_validation_advantages": [
+      -0.01,
+      0.01
+    ],
+    "mixture_rule": "For each weak parent and target, mix it with the strong parent. The mixture weight is computed analytically from validation mean correct-class probability; clip to [0,1] if target cannot be bracketed, and report clipping. Retain all six candidates.",
+    "no_evaluation_feedback": "Freeze mixture weights, scaler, all fitted coefficients and validation predictions in a separate command before reading evaluation labels. No library retries or candidate filtering based on evaluation values.",
+    "rationale": "Small average gaps with disagreement across contexts, rather than scaling each E2 candidate difference towards zero."
+  },
+  "outcome_definitions": {
+    "harm": "selected candidate true finite-pool advantage < 0",
+    "utility": "selected candidate true finite-pool advantage, zero on fallback",
+    "adaptive_harm_note": "attacker minimizes true utility, not the average harm indicator; a harmful witness establishes vulnerability. No harmful witness does not establish safety unless harmful outcomes are excluded by certificates."
+  },
+  "execution": "Four processes; sixteen predeclared 25-seed shards for main; four 2-seed shards for timing. Timing seeds excluded from inference. Preserve failed/partial attempts if any."
+}
