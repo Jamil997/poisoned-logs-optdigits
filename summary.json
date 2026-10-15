@@ -1,0 +1,98 @@
+{
+  "n_trials": 10,
+  "total_seconds": 88.91986979200738,
+  "methods": {
+    "IW": {
+      "positive_trials": 10,
+      "total_trials": 10,
+      "no_positive_score_fraction": 0.0,
+      "mean_expected_reward_conditional_on_selection": 0.7214470520786415,
+      "sd_across_trial_expected_rewards": 0.014662441629861068,
+      "mean_simple_regret_conditional_on_selection": 0.17822620193524474,
+      "selection_counts": {
+        "IW-trained": 10,
+        "SN-trained": 0,
+        "label-oracle": 0
+      },
+      "sampled_test_reward_mean_on_valid_trials": 0.7205693950177936,
+      "sampled_test_reward_trial_sd": 0.015118669335986774,
+      "upstream_table_reward_mean": 0.7205693950177936,
+      "upstream_table_dispersion_not_SE": 0.44843226736928055,
+      "mean_scoring_seconds": 8.923767600208521e-05
+    },
+    "SNIW": {
+      "positive_trials": 10,
+      "total_trials": 10,
+      "no_positive_score_fraction": 0.0,
+      "mean_expected_reward_conditional_on_selection": 0.23180691193742814,
+      "sd_across_trial_expected_rewards": 0.08096753398609356,
+      "mean_simple_regret_conditional_on_selection": 0.667866342076458,
+      "selection_counts": {
+        "IW-trained": 0,
+        "SN-trained": 10,
+        "label-oracle": 0
+      },
+      "sampled_test_reward_mean_on_valid_trials": 0.2341281138790036,
+      "sampled_test_reward_trial_sd": 0.07923307262248172,
+      "upstream_table_reward_mean": 0.23412811387900356,
+      "upstream_table_dispersion_not_SE": 0.4149048281684647,
+      "mean_scoring_seconds": 9.644199744798243e-05
+    },
+    "Cheb-SNIW": {
+      "positive_trials": 0,
+      "total_trials": 10,
+      "no_positive_score_fraction": 1.0,
+      "mean_expected_reward_conditional_on_selection": null,
+      "sd_across_trial_expected_rewards": null,
+      "mean_simple_regret_conditional_on_selection": null,
+      "selection_counts": {
+        "IW-trained": 0,
+        "SN-trained": 0,
+        "label-oracle": 0
+      },
+      "sampled_test_reward_mean_on_valid_trials": null,
+      "sampled_test_reward_trial_sd": null,
+      "upstream_table_reward_mean": null,
+      "upstream_table_dispersion_not_SE": null,
+      "mean_scoring_seconds": 0.00024460000568069515
+    },
+    "Emp. Bernstein for \u03bb-IW": {
+      "positive_trials": 10,
+      "total_trials": 10,
+      "no_positive_score_fraction": 0.0,
+      "mean_expected_reward_conditional_on_selection": 0.7214470520786415,
+      "sd_across_trial_expected_rewards": 0.014662441629861068,
+      "mean_simple_regret_conditional_on_selection": 0.17822620193524474,
+      "selection_counts": {
+        "IW-trained": 10,
+        "SN-trained": 0,
+        "label-oracle": 0
+      },
+      "sampled_test_reward_mean_on_valid_trials": 0.723238434163701,
+      "sampled_test_reward_trial_sd": 0.017224632276614752,
+      "upstream_table_reward_mean": 0.723238434163701,
+      "upstream_table_dispersion_not_SE": 0.4470203827865995,
+      "mean_scoring_seconds": 0.01506602080189623
+    },
+    "ESLB": {
+      "positive_trials": 10,
+      "total_trials": 10,
+      "no_positive_score_fraction": 0.0,
+      "mean_expected_reward_conditional_on_selection": 0.8996732540138861,
+      "sd_across_trial_expected_rewards": 1.1702778228589004e-16,
+      "mean_simple_regret_conditional_on_selection": 0.0,
+      "selection_counts": {
+        "IW-trained": 0,
+        "SN-trained": 0,
+        "label-oracle": 10
+      },
+      "sampled_test_reward_mean_on_valid_trials": 0.8996085409252668,
+      "sampled_test_reward_trial_sd": 0.006028735376814168,
+      "upstream_table_reward_mean": 0.8996085409252669,
+      "upstream_table_dispersion_not_SE": 0.3003675611342794,
+      "mean_scoring_seconds": 4.746550079213921
+    }
+  },
+  "upstream_reference_sampled_mean": 0.8999288256227758,
+  "note": "Null means no qualifying selection or insufficient trials, not zero reward."
+}

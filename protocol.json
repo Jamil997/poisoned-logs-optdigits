@@ -1,0 +1,55 @@
+{
+  "experiment": "E0-clean-released-code-reproduction",
+  "upstream_commit": "3c867e75ca22fd6eb01ac21e41fdc77f47b06ca8",
+  "openml_id": 28,
+  "n_trials": 10,
+  "split_seed": 0,
+  "log_fraction": 0.5,
+  "standardization": "all feature rows, as in upstream; no labels",
+  "delta_per_candidate": 0.05,
+  "behavior_temperature": 0.2,
+  "behavior_faulty_actions": [
+    1,
+    2
+  ],
+  "target_temperature": 0.1,
+  "reward_flip_probability": 0.1,
+  "gradient_steps": 10000,
+  "gradient_step_size": 0.01,
+  "eslb_iterations": 10,
+  "eslb_mc_batch": 1000,
+  "eslb_bias_type": "MultOneHot",
+  "primary_metrics": [
+    "selected policy expected reward on fixed test pool",
+    "simple regret to best candidate on fixed test pool",
+    "fraction with no positive score",
+    "elapsed seconds"
+  ],
+  "secondary_metrics": [
+    "upstream sampled test reward",
+    "selection counts",
+    "effective sample size",
+    "candidate score decomposition"
+  ],
+  "interpretation": "clean reproduction only; no adversarial reward edits",
+  "expectations_fixed_before_run": {
+    "qualitative": "ESLB should favor the ideal reference over inferior learned policies",
+    "published_OptDigits_ESLB": 0.91,
+    "published_OptDigits_lambda_IW": 0.72,
+    "published_OptDigits_Cheb_SN": "no positive bound",
+    "failure_action": "report discrepancy; do not tune to match the table"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "registered_utc": "2026-10-15T15:03:09.677289+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "vendor/offpolicy_selection_eslb/CONTRIBUTING.md": "1403439b12ea463a8e1470fd19f8ff7b7918475dcabb667aa04aaa2bee97b07c",
+  "vendor/offpolicy_selection_eslb/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "vendor/offpolicy_selection_eslb/README.md": "035f3f03b626ba61020ada35e0f3e61199d255d7c676e2e408c41ff29aa197f8",
+  "vendor/offpolicy_selection_eslb/UPSTREAM_COMMIT.txt": "6bc20acafd3b254f73814b040d53bfb188aa68d5586969f13d2976686ad55b05",
+  "vendor/offpolicy_selection_eslb/colabs/eslb_synthetic_example.ipynb": "add1e9cee3ac8438e530a863c8926214993a34e6e831256a7cc9edaba0920d7a",
+  "vendor/offpolicy_selection_eslb/data.py": "38fa0b51a8e0d7016631dcf9efce8f5dcd4f3a44de04eb64ca681405a2274737",
+  "vendor/offpolicy_selection_eslb/demo/benchmark.py": "0bdf95664b6353166db70f3695e29575bae3a5aff6832db1b8c6816be84279e3",
+  "vendor/offpolicy_selection_eslb/demo/run.sh": "80cdf93186b167710873e50708599b5191df187a8f0d2f8261b0e7d8f16edf15",
+  "vendor/offpolicy_selection_eslb/estimators.py": "57825a8f74426a0252d064223c51656dc08f911039d074108728e661e04ae51d",
+  "vendor/offpolicy_selection_eslb/experiment.py": "353ee02daf1c5f3206d34b3fc23799659146762e571d52adde8ccb2d38c9e35a",
+  "vendor/offpolicy_selection_eslb/policies.py": "61bbaf9119617e7e59919121e4eba2a64a802ebb1bbb09286d089b223ab0fea2",
+  "vendor/offpolicy_selection_eslb/requirements.txt": "72b513a68231dd406aca50478036f495f6b54f1f2d12766cca87b9f4a30ae789",
+  "vendor/offpolicy_selection_eslb/utils.py": "c9a3635b238df5f3b509727d79f696ae346a3e027e117cbc796568231a0c44ee"
+}

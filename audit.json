@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "trial_level_checks": 80,
+  "trials": 10,
+  "independent_recomputations": [
+    "IW scores",
+    "SN scores",
+    "finite-pool expected values",
+    "argmax and no-positive decisions",
+    "simple regret",
+    "summary means"
+  ],
+  "limitations": "Numerical consistency audit, not a confidence-coverage or robustness proof.",
+  "analysis_source_sha256": "77bfe540d8c4944347eb5e0aa542e79a836f86277238cb3ea723422d8847bb75"
+}
