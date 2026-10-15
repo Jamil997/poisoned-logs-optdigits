@@ -1,4 +1,12 @@
-# OptDigits: a clean baseline for off-policy policy selection
+# OptDigits: off-policy selection and reward poisoning
+
+This repository contains two completed empirical stages. **[E2: the full independent-policy poisoning experiment](security/README.md)** evaluates 400 fresh logs and 46,800 decisions. The pre-specified setting produced no harmful selections even without protection, so it does not establish a safety benefit for the proposed correction. The report includes the negative finding, attack certificates, uncertainty, code, and complete outputs.
+
+**E0**, documented below, reproduces the authors' released clean OptDigits benchmark. Its original code and result archive are preserved. The earlier [synthetic pilot](https://github.com/Jamil997/poisoned-logs-prior-pilot) remains a separate snapshot.
+
+---
+
+## E0: a clean baseline for off-policy policy selection
 
 This repository reproduces the OptDigits experiment available in the released code for **Kuzborskij et al. (AISTATS 2021), _Confident Off-Policy Evaluation and Selection through Self-Normalized Importance Weighting_**. It is the first empirical stage of a project on policy selection from potentially corrupted reward logs.
 
@@ -45,7 +53,7 @@ Two evaluation quantities were specified before the run: selected-policy value a
 $$
 V_T(\pi)=\frac{1}{|T|}\sum_{i\in T}\left[0.1+0.8\pi(y_i\mid x_i)\right],
 \qquad
-\operatorname{Regret}_T=\max_j V_T(\pi_j)-V_T(\widehat\pi).
+\mathrm{Regret}_T=\max_j V_T(\pi_j)-V_T(\widehat\pi).
 $$
 
 “Exact” integrates out action sampling and reward flips on these test examples. It does not mean that population performance is known. Test labels are used for this diagnostic and the original label-based reference, not to fit the two learned policies.
@@ -100,13 +108,9 @@ python -m zipfile -e results.zip .
 python analyze_results.py --results results/clean_10 --figure checked_results.png
 ```
 
-## Next experiment
+## Transition to the security experiment
 
-The next stage will change the question from clean best-policy selection to safe improvement under intentional reward corruption. It will use independently trained, frozen candidate policies and a separately fitted reward model, with a fresh evaluation log. The attacker will edit a bounded number of rewards while contexts, actions, and logging probabilities remain trusted.
-
-The comparisons will hold candidates, data access, and logs fixed across methods. The main outcomes will be the frequency of selecting a policy worse than the incumbent and the expected improvement retained under attack. A rule that always keeps the incumbent can avoid harmful changes while providing no improvement; both outcomes must therefore be reported. Adaptive attacks will target each evaluated defense, rather than relying only on a common random-corruption test.
-
-That security experiment, its analysis, and any new methodological contribution remain future work. The present result provides a reproducible starting point. All data used here are public benchmark data, and no policies are deployed in an external system.
+The independent-policy security experiment planned after E0 is now complete. [E2](security/README.md) documents the changed data split, frozen learned policies, adaptive reward attacks, full grid, negative result, and remaining research limitations. Its results are separate from the clean reproduction above.
 
 ## Sources
 
