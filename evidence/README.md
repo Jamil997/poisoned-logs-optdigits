@@ -72,6 +72,8 @@ All rules use the same total sample, edit budget and nominal alpha unless explic
 - **Unprotected weighted evidence:** same source weight and threshold, omitting the poisoning correction.
 - **Always retain:** zero improvement and no harmful deployment. It needs no observations operationally.
 
+The pooled confidence comparators transfer the E7 allocation to the present threshold-margin score. A separate post hoc check also reruns the **original E7 nonlinear Clopper–Pearson scoring code**. All 8,000 primary decisions are identical to the transferred comparators, in both geometries. Thus the reported primary comparisons do not depend on this score change. The original source hash, outputs and score reconstruction are preserved in `legacy_gate_check.json` and its script.
+
 The independent-pilot comparators are valid conditional tests because their allocation depends on unalterable observations independent of the main sample. We explicitly exclude them from the reference-poisoning stress experiment: holding their allocations fixed there would be an incomplete adaptive attack.
 
 ## Primary results
@@ -163,6 +165,7 @@ python -m unittest test_method.py
 python audit.py
 python analyze.py
 python cost_risk_diagnostic.py
+python legacy_gate_check.py
 python validate_results.py
 ```
 
