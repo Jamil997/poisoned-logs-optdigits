@@ -1,0 +1,245 @@
+{
+  "primary_contrasts": {
+    "0.05": {
+      "retain": {
+        "difference_pp": 0.207375,
+        "paired_bootstrap_95_pp": [
+          0.20107462499999998,
+          0.21331537499999997
+        ],
+        "seeds": 2000
+      },
+      "pooled_equal": {
+        "difference_pp": 0.026745,
+        "paired_bootstrap_95_pp": [
+          0.021044624999999997,
+          0.0324
+        ],
+        "seeds": 2000
+      },
+      "pooled_influence": {
+        "difference_pp": 0.0014700000000000004,
+        "paired_bootstrap_95_pp": [
+          -0.003990750000000001,
+          0.006870374999999996
+        ],
+        "seeds": 2000
+      },
+      "main_only": {
+        "difference_pp": 0.07209000000000002,
+        "paired_bootstrap_95_pp": [
+          0.065249625,
+          0.078870375
+        ],
+        "seeds": 2000
+      },
+      "trusted_only": {
+        "difference_pp": 0.14079,
+        "paired_bootstrap_95_pp": [
+          0.13413,
+          0.147525
+        ],
+        "seeds": 2000
+      },
+      "pilot_select_main": {
+        "difference_pp": 0.04946999999999999,
+        "paired_bootstrap_95_pp": [
+          0.04281000000000001,
+          0.056130000000000006
+        ],
+        "seeds": 2000
+      },
+      "pilot_weight_main": {
+        "difference_pp": 0.048615000000000005,
+        "paired_bootstrap_95_pp": [
+          0.041924625,
+          0.05505
+        ],
+        "seeds": 2000
+      },
+      "evidence_nominal": {
+        "difference_pp": -0.037875,
+        "paired_bootstrap_95_pp": [
+          -0.04603537500000001,
+          -0.029714625000000015
+        ],
+        "seeds": 2000
+      }
+    },
+    "0.45": {
+      "retain": {
+        "difference_pp": 1.8737950000000008,
+        "paired_bootstrap_95_pp": [
+          1.81844,
+          1.9277900000000001
+        ],
+        "seeds": 2000
+      },
+      "pooled_equal": {
+        "difference_pp": 0.24030500000000005,
+        "paired_bootstrap_95_pp": [
+          0.18901,
+          0.29160500000000006
+        ],
+        "seeds": 2000
+      },
+      "pooled_influence": {
+        "difference_pp": 0.8019149999999999,
+        "paired_bootstrap_95_pp": [
+          0.745215,
+          0.85997
+        ],
+        "seeds": 2000
+      },
+      "main_only": {
+        "difference_pp": 0.64801,
+        "paired_bootstrap_95_pp": [
+          0.5872448749999999,
+          0.711455
+        ],
+        "seeds": 2000
+      },
+      "trusted_only": {
+        "difference_pp": 1.26902,
+        "paired_bootstrap_95_pp": [
+          1.2096149999999999,
+          1.329775125
+        ],
+        "seeds": 2000
+      },
+      "pilot_select_main": {
+        "difference_pp": 0.45225,
+        "paired_bootstrap_95_pp": [
+          0.3928598749999999,
+          0.5116499999999999
+        ],
+        "seeds": 2000
+      },
+      "pilot_weight_main": {
+        "difference_pp": 0.44144500000000003,
+        "paired_bootstrap_95_pp": [
+          0.3820449999999999,
+          0.50084
+        ],
+        "seeds": 2000
+      },
+      "evidence_nominal": {
+        "difference_pp": -0.80595,
+        "paired_bootstrap_95_pp": [
+          -0.85995,
+          -0.7519500000000001
+        ],
+        "seeds": 2000
+      }
+    }
+  },
+  "cost_matched_contrasts": {
+    "0.05": {
+      "5": {
+        "difference_pp": -0.07413,
+        "paired_bootstrap_95_pp": [
+          -0.080565,
+          -0.06784500000000002
+        ],
+        "seeds": 2000
+      },
+      "10": {
+        "difference_pp": -0.013905000000000002,
+        "paired_bootstrap_95_pp": [
+          -0.021210375000000004,
+          -0.006465
+        ],
+        "seeds": 2000
+      },
+      "50": {
+        "difference_pp": 0.100545,
+        "paired_bootstrap_95_pp": [
+          0.09363,
+          0.10758000000000001
+        ],
+        "seeds": 2000
+      }
+    },
+    "0.45": {
+      "5": {
+        "difference_pp": -0.661505,
+        "paired_bootstrap_95_pp": [
+          -0.7195550000000001,
+          -0.602104875
+        ],
+        "seeds": 2000
+      },
+      "10": {
+        "difference_pp": -0.12689999999999999,
+        "paired_bootstrap_95_pp": [
+          -0.19306012500000003,
+          -0.06074499999999999
+        ],
+        "seeds": 2000
+      },
+      "50": {
+        "difference_pp": 0.9058600000000002,
+        "paired_bootstrap_95_pp": [
+          0.8437120000000001,
+          0.9693149999999999
+        ],
+        "seeds": 2000
+      }
+    }
+  },
+  "matched_risk_contrasts": {
+    "0.05": {
+      "pooled_equal": {
+        "difference_pp": 0.024495000000000003,
+        "paired_bootstrap_95_pp": [
+          0.018510000000000006,
+          0.03054
+        ],
+        "seeds": 2000
+      },
+      "main_only": {
+        "difference_pp": 0.06855,
+        "paired_bootstrap_95_pp": [
+          0.061545,
+          0.07569000000000001
+        ],
+        "seeds": 2000
+      },
+      "trusted_only": {
+        "difference_pp": 0.141405,
+        "paired_bootstrap_95_pp": [
+          0.1347,
+          0.14811000000000002
+        ],
+        "seeds": 2000
+      }
+    },
+    "0.45": {
+      "pooled_equal": {
+        "difference_pp": 0.2187,
+        "paired_bootstrap_95_pp": [
+          0.16469999999999999,
+          0.27135000000000004
+        ],
+        "seeds": 2000
+      },
+      "main_only": {
+        "difference_pp": 0.618305,
+        "paired_bootstrap_95_pp": [
+          0.55486,
+          0.681755
+        ],
+        "seeds": 2000
+      },
+      "trusted_only": {
+        "difference_pp": 1.27711,
+        "paired_bootstrap_95_pp": [
+          1.2163700000000002,
+          1.337870125
+        ],
+        "seeds": 2000
+      }
+    }
+  },
+  "bootstrap": "10000 paired seed resamples using multinomial frequencies of paired differences; pointwise intervals, no simultaneous claim"
+}

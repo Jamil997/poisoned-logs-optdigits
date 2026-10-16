@@ -1,0 +1,4 @@
+completed 0.02 decisions 1620000 seconds 8.01
+completed 0.03 decisions 3240000 seconds 15.55
+completed 0.05 decisions 4860000 seconds 23.47
+{'seconds': 25.431383500050288, 'source_hashes': {'protocol.json': '8919cd4730abaa8113345c86c59df583a7207be454f490b2acaffa97bd60d992', 'method.py': 'a48b9785630cf53cd9baf76de2c46fe5e4b099c9000be490401b194446b637e3', 'run.py': '395040be7f6e7c9bc0ae7c7a8b4c916f6ff2585249a01d7dd4805f39e3bae09a'}, 'decisions': 4860000, 'cost_decisions': 192000, 'stress_decisions': 96000, 'independent_seed_clusters': 2000, 'source_log_arrays': 75, 'min_main_attack_group_slack': 3328}

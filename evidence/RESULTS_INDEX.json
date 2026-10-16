@@ -1,0 +1,42 @@
+{
+  "archives": {
+    "evidence_metadata.zip": {
+      "results/attack_certificates.npz": "68ecb0ae9d51dfb35acc757bb93fa98f22b9ca263b7ebd6d79f9fcedeceb6a72",
+      "results/logs.npz": "20386c9956ac1f88a2173b057302d2b1c85c372011efc563abc681b3dd023de9",
+      "results/metadata.json": "1c32c8313a4f762aafb505c8f97f8b0b019515be91f21451fbde7cb73489f569",
+      "results/frozen_protocol.json": "8919cd4730abaa8113345c86c59df583a7207be454f490b2acaffa97bd60d992",
+      "results/design_grid.csv": "c8d09ea82b58c02ddb3b81d03c2fe5a3c65094fd34013b38dbdfb4f60a7bfc1f",
+      "results/stress_runs.csv.gz": "1fb9586d0ba22d55df4c09cf8c10871719ae0a434414ff6d2772a80d76071cda",
+      "results/cost_runs.csv.gz": "a7fdc247e179e8cfa6a896c669eafe999355e9d7bcb0c7e5bdd25e71a89b6601",
+      "results/risk_bounds.csv": "4cd2b2ca7ca9b8619fec8ba43eeb7ce67284f35da9f5c48b4b2c77f68f57b84a",
+      "results/designs.json": "68232000de64300612dc564f57d5102295fe2c65a450b6c9b4e41de49cc26668"
+    },
+    "evidence_runs_01.zip": {
+      "results/chunks/runs.csv.gz.part01": "15b6df10cadfe68585673ab37214e0500c8e6d606dfb73076752668edc4af6e5"
+    },
+    "evidence_runs_02.zip": {
+      "results/chunks/runs.csv.gz.part02": "661e9439db0d83fc15dcb56c827a751bcb8bb94c37baa309f3da1848a65c50dd"
+    },
+    "evidence_runs_03.zip": {
+      "results/chunks/runs.csv.gz.part03": "96099c2e4e240672ecb1fec08ae219399a83ee08fbeb899f2810865b60dd0899"
+    },
+    "evidence_runs_04.zip": {
+      "results/chunks/runs.csv.gz.part04": "c44a8bfe5511500dfd8fe0f63f0b274d3c4f5784007faa526fee086e4265788c"
+    },
+    "evidence_runs_05.zip": {
+      "results/chunks/runs.csv.gz.part05": "ee69d0ea017189047649267987ff2ea5e5944184c85f9a203606949820155362"
+    },
+    "evidence_runs_06.zip": {
+      "results/chunks/runs.csv.gz.part06": "61a629d14e765cc26dd46573514d72b4c9cfd486a223fddaccdadbc8382a8362"
+    }
+  },
+  "parts": [
+    "results/chunks/runs.csv.gz.part01",
+    "results/chunks/runs.csv.gz.part02",
+    "results/chunks/runs.csv.gz.part03",
+    "results/chunks/runs.csv.gz.part04",
+    "results/chunks/runs.csv.gz.part05",
+    "results/chunks/runs.csv.gz.part06"
+  ],
+  "runs_sha256": "827bbda6fbef5554f6ef27a9164778fce8edfab6b4f1b8300a6013f48d2078d3"
+}

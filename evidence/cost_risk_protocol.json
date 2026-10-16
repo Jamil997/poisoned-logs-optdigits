@@ -1,0 +1,13 @@
+{
+  "stage": "E8 post hoc cost-risk diagnostic",
+  "reason": "Nominal-alpha cost curves can have different actual harmful-policy risk; apply the prespecified primary matched-risk calibration also to monetary-cost controls",
+  "gamma": 0.001,
+  "p_bad": 0.499,
+  "rho": [
+    5,
+    10,
+    50
+  ],
+  "seeds": "Same E8 seeds 90000..91999; no fresh confirmation",
+  "weights": "No retuning of the proposed evidence weight"
+}

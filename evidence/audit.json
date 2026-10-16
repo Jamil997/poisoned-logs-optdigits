@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "decisions_reconstructed": 5148000,
+  "adaptive_decisions_verified": 1536000,
+  "source_log_arrays_regenerated": 75,
+  "full_count_type_attack_vectors": 196000,
+  "max_score_error": 9.999054535747565e-17,
+  "independent_calibration": "FFT convolution; runner uses conditional binomial-tail summation",
+  "attack_completeness": "Monotone endpoints plus feasible row-type edits; no unresolved utility gaps",
+  "seconds": 38.09794449998299
+}

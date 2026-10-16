@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "main_grid_cells": 2430,
+  "main_decisions": 4860000,
+  "matched_risk_decisions": 16000,
+  "max_matched_score_error": 9.996344030316351e-17,
+  "seed_count_per_cell": 2000,
+  "posthoc_cost_risk_decisions": 12000
+}

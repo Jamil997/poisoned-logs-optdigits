@@ -1,0 +1,79 @@
+{
+  "stage": "E8: combining trusted and corruptible evidence without an oracle ranking",
+  "status": "Frozen before E8 outcome simulation; design is motivated by E7 geometry reversal",
+  "total_observations": 20000,
+  "trusted_sizes": [
+    0,
+    250,
+    1000,
+    2000,
+    5000
+  ],
+  "beta": [
+    0.02,
+    0.03,
+    0.05
+  ],
+  "theta": 0.001,
+  "epsilon": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "amplitudes": [
+    [
+      0.05,
+      0.45
+    ],
+    [
+      0.45,
+      0.05
+    ]
+  ],
+  "alpha": 0.01,
+  "seeds": {
+    "start": 90000,
+    "count": 2000
+  },
+  "methods": [
+    "retain",
+    "pooled_equal",
+    "pooled_influence",
+    "main_only",
+    "trusted_only",
+    "pilot_select_main",
+    "pilot_weight_main",
+    "evidence_weighted",
+    "evidence_nominal"
+  ],
+  "conditions": [
+    "clean",
+    "random",
+    "adaptive"
+  ],
+  "primary": {
+    "total_observations": 20000,
+    "trusted_size": 1000,
+    "beta": 0.03,
+    "epsilon": 0.01,
+    "both_amplitude_pairs": true
+  },
+  "primary_comparators": [
+    "pooled_equal",
+    "trusted_only",
+    "pilot_select_main",
+    "pilot_weight_main",
+    "pooled_influence"
+  ],
+  "success": "Positive worst-attack improvement in both geometries; paired 95% improvement intervals above zero against matched-data pooled-equal and trusted-only rules. Report every comparator, harm, fallback, analytical harm upper bounds, all parameter cells and cost curves, even when another method wins. No global Pareto claim.",
+  "weight_rule": "Choose a mixture on {0,.05,...,1} plus the pooling weight to minimize exact-null threshold minus .5 plus twice the maximum normalized attack shift. Only sample sizes, edit cap and alpha are inputs; beta, theta and true policy quality are excluded.",
+  "trust": "Reference observations are iid from exactly the same population, independent of main observations, inaccessible to the attacker in the main experiment. No free oracle labels: reference size m replaces m main observations in a total N=20000. Candidate policies and propensities are fixed and trusted.",
+  "edit_budget": "k=floor(epsilon*N) is fixed across all methods, including those with smaller main samples. It is not reduced to epsilon*(N-m).",
+  "cost": "One main observation costs 1; a trusted observation costs rho in {5,10,50}. Total acquisition cost N-m+rho*m. Compare a trusted-only sample of floor(cost/rho) observations. These are hypothetical cost ratios, not measured deployment costs.",
+  "attack": "Attacker sees both logs and the full rule, edits up to k MAIN rewards. Conditional on the unalterable reference sample, simultaneous extreme attacks attain the globally worst decision. Canonicalize edited rewards at 1/2; endpoint attacks cover real replacements. Verify sufficient row-group capacities and all outcome witnesses.",
+  "stress": "At the primary parameters, permit up to floor(.01*m) trusted edits within the SAME total k. Evaluate the evidence rule ignoring this breach and a redesign declaring the cap; test pooled and trusted-only controls. Do not claim pilot-allocation attack completeness in this stress; those methods are excluded there.",
+  "null_calibration": "Exact distribution of an integer-weighted sum of independent binomials at p=.5, with a 1e-12 numerical guard. Scores are approval margins, not lower confidence limits for the size of improvement. Conditional Bonferroni for pilot methods; unconditional for fixed designs.",
+  "cost_baselines": "Trusted-only controls use the same alpha and exact count test and an independent nested reference stream. All-trusted N=20000 is also reported with its larger cost. Always retain costs zero operationally; plotting it at each acquisition budget only denotes that it declines to use acquired data.",
+  "limits": "Four-context synthetic benchmark; fixed continuous-parameter policies, finite candidate list, constant importance-coefficient magnitudes. No OptDigits generalization, novelty, global optimality or conference-acceptance claim. Benchmarks and formulas build on prior E6/E7.",
+  "matched_risk_control": "Before E8 outcome simulation: in both primary geometries, repeat fixed-weight methods with a common harmful-candidate positivity upper bound gamma=.001 under the known evaluator p_bad=.499. Recalibrate thresholds only; preserve the previously selected weights. This oracle calibration is an evaluation diagnostic, not a deployable method. Include pooled_equal, main_only, trusted_only and evidence_weighted; check whether gain survives actual-risk matching."
+}
