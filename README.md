@@ -1,5 +1,9 @@
 # OptDigits: off-policy selection and reward poisoning
 
+**[E9: acquisition choice and the cost of a safe policy update](acquisition_choice/README.md)** compares buying only trusted data, buying only ordinary data, and combining the two. With a fixed historical log, weighted evidence meets a prespecified useful-gain target at a smaller tested additional budget than trusted-only evaluation. With unrestricted acquisition, collecting more ordinary observations can win. The automatic chooser has documented failures. The release contains the complete fresh-seed experiment, independent audits, and all unsuccessful configurations.
+
+**[Research findings and the next Pareto claim](RESEARCH_FINDINGS.md)** explains what E0–E9 establish, how the methods relate to prior work, and the remaining experiment needed to demonstrate a safety–utility–cost frontier extension. The main open comparison requires independently tuned baselines, matched safety constraints, and fresh confirmation. E9 is a synthetic mechanism study, not a new OptDigits result.
+
 **[E8: trusted and corruptible evidence](evidence/README.md)** replaces the earlier influence-only heuristic with a source-weight rule that does not know policy quality. In a controlled synthetic benchmark with 20,000 observations, including 1,000 trusted observations, and 200 reward edits, it improves utility over ordinary pooling in both influence geometries. The advantage survives a matched harmful-candidate risk ceiling. Cost-matched trusted-only baselines and an adaptive breach of the reference sample expose clear limits. Code, all results, exact attack certificates, and independent audits are included.
 
 This repository contains a sequence of empirical studies with preserved baselines. **[E6–E7: the controlled benchmark and confidence-allocation experiment](controlled/README.md)** reports a fixed-budget security–utility tradeoff, exact adaptive attacks, a method based on policy-specific confidence allocation, and a prespecified reversed-geometry test where that heuristic fails. Its primary comparison improves utility and lowers the model-specific harm bound; it is a conditional result, not a claim of general Pareto optimality or established novelty.
@@ -72,17 +76,17 @@ The ten-trial run completed on 15 October 2026. The table reports the mean and s
 
 | Selection method | Expected test reward, mean ± SD | Mean simple regret | Selected candidate | No positive score |
 |---|---:|---:|---|---:|
-| ESLB | 0.8997 ± 0.0000 | 0.0000 | Ideal reference, 10/10 | 0/10 |
-| λ-IW, empirical Bernstein | 0.7214 ± 0.0147 | 0.1782 | IW-trained, 10/10 | 0/10 |
-| IW / IPS | 0.7214 ± 0.0147 | 0.1782 | IW-trained, 10/10 | 0/10 |
-| SN / SNIPS | 0.2318 ± 0.0810 | 0.6679 | SN-trained, 10/10 | 0/10 |
+| ESLB | 0.900 ± 0.000 | 0.000 | Ideal reference, 10/10 | 0/10 |
+| λ-IW, empirical Bernstein | 0.721 ± 0.015 | 0.178 | IW-trained, 10/10 | 0/10 |
+| IW / IPS | 0.721 ± 0.015 | 0.178 | IW-trained, 10/10 | 0/10 |
+| SN / SNIPS | 0.232 ± 0.081 | 0.668 | SN-trained, 10/10 | 0/10 |
 | Chebyshev–SN | — | — | No positive bound | 10/10 |
 
 ![Expected reward of the selected policy over ten log seeds](clean_results.png)
 
 ESLB selected the ideal reference in all ten trials. Its zero trial-level SD follows from repeatedly selecting a reference with fixed expected value; it is not evidence of zero statistical uncertainty. The other methods either selected weaker learned policies or returned a vacuous bound. These observations support using confidence-based selection as a baseline in this particular setup. They do not establish that SN estimation generally performs poorly: here, the SN objective is also used to train a candidate on the same sample that is subsequently used for selection.
 
-The upstream sampled-reward calculation gave **0.8996** for ESLB and **0.7232** for λ-IW. Table 2 of the paper reports **0.91** and **0.72**, respectively, and a vacuous Chebyshev bound. The qualitative ordering agrees, but the numerical reproduction is incomplete. The appendix specifies 100,000 training steps, whereas the released demo defaults to 10,000. The available benchmark also omits the paper's DR, λ-DR, and empirical-likelihood comparisons. The remaining numerical differences have not been resolved, and no hyperparameters were adjusted to match the published table.
+The upstream sampled-reward calculation gave **0.900** for ESLB and **0.723** for λ-IW. Table 2 of the paper reports **0.91** and **0.72**, respectively, and a vacuous Chebyshev bound. The qualitative ordering agrees, but the numerical reproduction is incomplete. The appendix specifies 100,000 training steps, whereas the released demo defaults to 10,000. The available benchmark also omits the paper's DR, λ-DR, and empirical-likelihood comparisons. The remaining numerical differences have not been resolved, and no hyperparameters were adjusted to match the published table.
 
 ## Reproducibility and checks
 
