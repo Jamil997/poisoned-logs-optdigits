@@ -1,0 +1,37 @@
+E9 local reproduction
+
+All paths are relative to this acquisition_choice directory.
+Use the Python interpreter in the parent poisoned_logs_optdigits/.venv directory.
+
+Verify the retained experiment:
+  ../.venv/bin/python -m unittest -v test_method
+  ../.venv/bin/python audit_fast.py
+  ../.venv/bin/python analyze.py
+  ../.venv/bin/python figures.py
+
+To generate new outcomes, copy protocol.json and the Python files to a new empty
+folder, then run run.py with the same interpreter. The runner refuses to overwrite
+an existing results directory. run.py --timing uses a disjoint ten-seed range.
+The original timing run preceded an I/O-only auditor optimization; its stored
+hashes document the exact earlier version. The main results use the final frozen
+source hashes and are the confirmation evidence.
+
+Files:
+  protocol.json                Prespecified configuration and criteria.
+  method.py                    Acquisition rule; no outcome or policy truth input.
+  run.py                       Data generation and adaptive evaluation.
+  audit.py / audit_fast.py      Independent calibration and witness reconstruction.
+  analyze.py                   Simultaneous intervals and minimum-cost summaries.
+  figures.py                   Descriptive figures.
+  REPORT.txt                   Findings, limitations and interpretation.
+  results/groups.csv           Configurations, sample sizes, weights and costs.
+  results/outcomes.npz          Every clean/adaptive selection and attack option.
+  results/logs.npz              Complete 16-type source counts.
+  results/summary.csv           Utility, harm, fallback and simultaneous intervals.
+  results/contrasts.csv         Pointwise paired and conservative simultaneous contrasts.
+  results/minimum_cost.csv      Smallest tested cost meeting the two frozen targets.
+  results/design_grid.csv      Every candidate and chosen acquisition design.
+  results/audit.json            Independent verification outcome.
+  results/witness_examples.npz  Example feasible row-type edits; all seeds audited.
+
+All price ratios are scenario assumptions. This folder was not uploaded.

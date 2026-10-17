@@ -1,0 +1,16 @@
+{
+  "published_after_local_run": true,
+  "publication_date": "2026-10-17",
+  "base_commit": "08d8418de619c1547edc18b9e2253174a7adb2da",
+  "original_run_preserved": true,
+  "original_local_only_language": "The protocol, manifest, REPORT and REPRODUCE describe the completed local run. The user authorized publication afterward. They remain unchanged for provenance.",
+  "archive_contents": "All original results files, unchanged; timing pilot not included as evidence.",
+  "new_files": [
+    "README.md",
+    "restore_results.py",
+    "verify_release.py",
+    "publication_provenance.json",
+    "RELEASE_MANIFEST.sha256"
+  ],
+  "no_new_simulation_for_publication": true
+}

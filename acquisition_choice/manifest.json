@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-17",
+  "local_only": true,
+  "proposal_changed": false,
+  "github_changed": false,
+  "frozen_sources_verified": true,
+  "audit_passed": true,
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  },
+  "visual_review": [
+    "source_choices.png",
+    "cost_utility.png",
+    "fixed_log_comparison.png"
+  ],
+  "sha256": {
+    "audit_fast.py": "0048660c8eb82720c76469b2c85eb4bd5a3ce110c8158d13a62f7b86834ee57c",
+    "run.py": "440414d18bc07938666bea6665a9d6e17fe6e793eb2ffe55679ccfeba2977b36",
+    "audit.py": "9548ab52516cab7277d96178f3ce7a4c8310af68cde4285113dfb8e51a97b4d4",
+    "test_method.py": "13373130c98fadb3cf574fb9d5139eaf64613d101714cecac5ccfad977447c17",
+    "requirements.txt": "66111ee0a8de636677e2aac3361ce3874f3f2897999d7c836ed694afbc94947a",
+    "REPORT.txt": "6d7b37ad91d395fee93ec5d04ce9803cde8b962dc066c0fa156da350ea308495",
+    "figures.py": "59dc401bb7b24082977580ec89c0b2a0d542957ddecfc5ba8e77e185d1b694e8",
+    "protocol.json": "0ac98caa8a42662440926ff4e0644e972f589b56ec198429af54d29ae10c50e3",
+    "method.py": "eaf7b74bc972ec70314b2ff3b10672a4d6c246fce6d371ca895c7e3024a22f30",
+    "REPRODUCE.txt": "820037f88ba61d305ee0b1bc2f37b058c4b3462952d104308b1d86147cec89b2",
+    "analyze.py": "dc018c90d18410541dd9ccb4122bfd33abfcabe7ef799f9fb66b9a32d54fb299",
+    "results/groups.csv": "fc9e62b4d92393e6097774b45af0240f8dfd4b56412a7218be02d42927f355e2",
+    "results/summary.csv": "0c2fc5fb9cbea5762ddba6e5bfcc3f05e9a549a537b5f5b6f7a66ddc83517e21",
+    "results/audit.json": "583805f0e952408eb8ced59f658a5b975dce79b267fe1a7d8ea966d5ea86029c",
+    "results/source_choices.png": "01771e09b53e5bc1897cbad78bf6ddb66129709caee3842622da8c63e5f0dd31",
+    "results/designs.csv": "18a835f9d4a03ca73371daddae2c14aa72bb66dd0aeeef6cf26c2c4af21d4221",
+    "results/fixed_log_comparison.png": "5d6efe4c69132bbc40c15c61b6b02a3aebe67d48adcc34a0f425eb24b2a2be67",
+    "results/outcomes.npz": "be3fb7b3bbd13a5c51a43a10dd6b0232a8ebd2ffc09883e260d0f4e4b0c48ec5",
+    "results/logs.npz": "0c1ed294df39fecbc00dba363b28fb2d193d09365a1612b5ff3f07cdf73fdd71",
+    "results/metadata.json": "7641c202f2a8c58c2c25462d1fc5e267e01dbc95d1ab8cb5d57f5ae096c25935",
+    "results/frozen_protocol.json": "46990a05a62c84ef489a4f081d7a3b85186641ff3ae85e51b17fd35d06f1f77c",
+    "results/design_grid.csv": "9523e45d34ea0b4cc3c9ce7798337084a3cab18fbcfd44ec42dc6f3a6470b912",
+    "results/witness_examples.npz": "7527478ecf5fa5c39e6b097ab344cd2f5866de98937b658a98c95564dea3583a",
+    "results/minimum_cost.csv": "d1940dba41a91d9dc2b7bc9daa1a61d6f80d0987d933b49fd9f7b79a3009e094",
+    "results/cost_utility.png": "8ecfccf4a8b0cc5ef8f905f05685e14b44aadfc8e0c5479c1aa76ef1b35bf129",
+    "results/contrasts.csv": "d1beb0b16a9c949801deeb27dd3d6772a82c47f37a170d195daf82abd0a6a9e1",
+    "results/source_hashes.json": "3db5118a2b35f252c073f6eb1016d65a73c3060cf5eb40cf6bff110c37d8d7b0",
+    "results/analysis.json": "838e2353400c1b4159055d9061fe19eb4462994e872a564e002e64abccb2e08b"
+  }
+}

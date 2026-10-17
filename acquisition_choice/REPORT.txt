@@ -1,0 +1,153 @@
+E9: ACQUISITION CHOICE AND THE COST OF A SAFE POLICY UPDATE
+Local experiment completed 17 October 2026. No GitHub update or proposal edit.
+
+QUESTION AND DESIGN
+We tested three questions: whether conclusions depend on cost accounting;
+whether an acquisition rule can choose trusted-only evaluation; and the smallest
+tested cost at which a safe update meets a prespecified usefulness target.
+
+The controlled population is the E8 four-context, two-action Bernoulli setting.
+All candidates and their influence coefficients are fixed before evaluation.
+Main and trusted data share the same population and randomized logger. Trusted
+rewards are immutable and independent of the main sample. This is a synthetic
+experiment, not a new result on OptDigits or an estimate of real acquisition costs.
+
+The protocol was fixed before the full run. It includes 2,000 fresh independent
+seed clusters, three signal strengths, both policy-influence geometries, nine
+rules, six price ratios (1, 2, 5, 10, 20, 50), two significance levels (0.01,
+0.001), two attack models and two cost-accounting models. All conditions and
+outcomes, including failures, are retained. The large number of decisions is
+repeated evaluation on these clusters, not millions of independent replications.
+
+COST AND THREAT ASSUMPTIONS
+Total purchase: a main row costs 1 and a trusted row costs rho. Every method can
+spend the same available budget on its own sample sizes, including buying more
+cheap main rows. Main-sample availability is not artificially capped.
+Historical sunk: a common 19,000-row main log is already available, and only new
+trusted rows are charged. The all-main baseline has zero incremental cost.
+These are different resource models and are analyzed separately.
+
+The white-box attacker observes logs, candidate models, source weights and the
+complete final rule. It changes only main rewards. One model permits up to 200
+edits; the other permits up to 1% of main rows. The latter count changes with the
+purchased sample size, according to the same declared threat rule for every
+method. The attacker knows policy truth; the acquisition rule does not.
+
+THE ACQUISITION RULE
+For each feasible acquisition plan and source-weight pair, the rule calculates
+an exact binomial null threshold h and the maximum count distortion d. It chooses
+the smallest standardized attacked mean-approval barrier:
+  (h - 0.5 + 2*d) / denominator - 0.5.
+This uses only counts, costs, the declared attack and the allowed testing error.
+Trusted-only and main-only are genuine acquisition endpoints: the rule can redirect
+money into purchasing a different number of observations, rather than merely
+ignoring data after paying for it. The rule is frozen before evaluation rewards.
+
+The weight grid is expressed as integer per-row weights, rather than the E8 grid
+of source fractions. It includes (main,trusted) weights (4,19), reproducing the E8
+0.2 reference fraction at 19,000 main and 1,000 trusted rows. It also includes
+(1,4), which the new criterion sometimes selects instead. E9 is a new controlled
+comparison with fresh seeds and common uniform-null risk bounds. Its numbers
+should not be compared as if they were the same E8 oracle risk-calibration run.
+
+FINDING 1: COST ACCOUNTING CHANGES THE ANSWER
+With a total budget of 20,000, price ratio 5, a 200-edit cap and low-influence good
+policy, the rule buys 4,000 trusted observations and no main rows. Its improvement
+is 0.267 percentage points (pp), compared with 0.180 pp for buying only main rows.
+At price ratio 50 and the same budget, it buys only main rows, obtaining 0.180 pp;
+trusted-only evaluation gives 0.020 pp. The rule can therefore choose either
+endpoint without knowing which policy is good.
+
+The stronger all-main comparator changes the interpretation of the older cost
+example. At budget 69,000 and price ratio 50, buying 69,000 main observations
+obtains 0.300 pp under a 200-edit cap. The fixed 19,000-main/1,000-trusted design
+obtains 0.212 pp, and trusted-only obtains 0.101 pp. Buying more main rows dilutes
+a fixed attack budget. The rate-based threat is reported separately; large logs
+can also be useful there when the reward signal exceeds the corruption barrier.
+It would be misleading to present expensive trusted data alone as a reason to mix.
+
+FINDING 2: THE SELECTOR IS NOT AN EXPECTED-UTILITY OPTIMUM
+At total budget 10,000 and price ratio 20 under a 200-edit cap, the selector chooses
+main-only. Its gain is slightly negative and rounds to zero, whereas trusted-only
+achieves 0.030 pp in the low-influence-good configuration and 0.274 pp after
+reversing the influence relationship. Minimizing a mean-approval threshold can
+misrank the finite-sample probability of a useful decision. Thus the acquisition
+selector is a working baseline with a falsified universal superiority claim.
+It should not be advertised as Pareto-optimal or as reliably choosing the best
+allocation in every regime.
+
+FINDING 3: A FIXED HISTORICAL LOG IS A BETTER MECHANISM EXAMPLE
+With 19,000 existing main rows, a new-data budget of 10,000, price ratio 5 and a
+200-edit cap, the budget buys 2,000 trusted rows. The source-weight rule gives
+those rows weight 0.333. Results under the exact worst-utility attack are:
+
+                                      Low-influence good     High-influence good
+                                      gain pp / harm %       gain pp / harm %
+Main only, no additional cost          0.137 / 0.200           1.234 / 0.150
+Trusted only                          0.156 / 0.250           1.411 / 0.100
+Equal pooling                         0.219 / 0.150           1.979 / 0.050
+Influence-based error allocation       0.239 / 0.050           1.454 / 0.250
+Independent pilot selection           0.163 / 0.000           1.466 / 0.000
+Independent pilot error allocation    0.159 / 0.000           1.435 / 0.000
+Source weighting / acquisition rule   0.257 / 0.200           2.319 / 0.000
+
+All methods have a 1% analytic harmful-deployment ceiling, not identical actual
+harm. Zero observed harm does not mean zero population risk. The weighted-minus-
+influence contrast in the low-influence geometry is 0.018 pp, with pointwise
+paired interval [0.013, 0.023]. Its conservative experiment-wide simultaneous
+interval still includes zero. The reversal comparison is much stronger. Source
+weighting and the new acquisition selector make identical decisions in this
+example: the result supports evidence combination, not an additional gain from
+acquisition optimization.
+
+FINDING 4: USEFULNESS MUST BE MORE THAN SIMPLY POSITIVE
+The primary usefulness target was 0.100 pp. In the historical-log setting above,
+the main-only baseline already exceeds this target at zero additional cost.
+Buying trusted data is not necessary for that modest target.
+
+A second, prespecified target requires 75% of the best available policy gain.
+This equals 0.225 pp in the low-influence geometry and 2.025 pp in the reversal.
+At a new-data budget of 10,000, source weighting has simultaneous utility lower
+bounds 0.244 and 2.209 pp, meeting both targets. Trusted-only evaluation fails at
+this budget, with upper bounds 0.173 and 1.557 pp; it first meets both targets at
+20,000 on the tested grid. This is a smallest-tested-budget comparison. The
+experiment does not establish an exact twofold reduction in minimum population
+cost; intermediate budgets were not tested.
+
+STATISTICAL AND ATTACK CHECKS
+Five correctness tests passed, including exhaustive small-sample attack search
+and independent null calibration. The audit reconstructed all 44,064,000 clean
+and attacked decisions, regenerated 234 source arrays, checked 14,528 design-grid
+entries and 4,872 calibration cases, and verified feasible attack witnesses for
+all evaluated seeds. Endpoint attacks attain the worst selected-policy utility
+for this specific two-candidate monotone gate. No claim is made for arbitrary
+learned-policy libraries. Runner calibration uses FFT convolution; the auditor
+uses conditional binomial survival summation with an omitted-mass bound.
+
+Utility intervals use exact Clopper-Pearson bounds on good/bad selection
+probabilities with a Bonferroni correction across both conditions and all groups.
+Their joint coverage is at least 95%. Paired bootstrap intervals are descriptive,
+pointwise intervals. Harm guarantees are analytic uniform-null guarantees;
+finite-sample harm frequencies may exceed a small nominal level. At alpha 0.001,
+the largest observed frequency was 0.150%; that alone does not refute the bound.
+
+Runtime: the simulation took 7.152 seconds, cached independent audit 3.175 seconds,
+and analysis 11.282 seconds. An initial audit attempt was stopped because it
+repeatedly decompressed the same arrays. audit_fast.py runs the frozen auditor
+unchanged with arrays cached once; this changes I/O only. Implementation and
+manual review time are not included in those timings. All three figures were
+rendered and visually inspected.
+
+WHAT THIS MEANS FOR CHOOSING A PROJECT EXAMPLE
+The fixed-historical-log, cost-versus-useful-improvement comparison is the strongest
+candidate for presentation from this run. It has a clear resource constraint,
+strong comparators, useful gain and a reversal test. The choice remains with the
+user; no presentation, proposal or GitHub repository was updated.
+
+The all-data-purchased result is an essential counterexample and should accompany
+it. It prevents a claim that mixing is always worth paying for. The new selector
+should be presented as exploratory until its threshold objective is replaced or
+justified through a guarantee about decision power or expected utility. Real
+acquisition costs, general learned policies, compromised references and source
+shift remain unresolved. The current experiment tests assumed cost models; it
+cannot establish that price ratio 5 or 50 describes a real deployment.
